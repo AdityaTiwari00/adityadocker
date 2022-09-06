@@ -15,6 +15,7 @@ RUN yum -y install php72w php72w-bcmath php72w-cli php72w-common php72w-gd php72
 # Update Apache Configuration
 RUN sed -E -i -e '/<Directory "\/var\/www\/html">/,/<\/Directory>/s/AllowOverride None/AllowOverride All/' /etc/httpd/conf/httpd.conf
 
+EXPOSE 443
 EXPOSE 80
 
 # Start Apache
